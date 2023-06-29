@@ -38,7 +38,6 @@ dependencies:
   provider:
   shared_preferences:
   flutter_local_notifications:
-  flutter_native_timezone: ^2.0.0
   flare_flutter:
 
 dev_dependencies:

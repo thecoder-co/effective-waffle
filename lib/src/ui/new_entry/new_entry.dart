@@ -9,7 +9,6 @@ import 'package:medicine_reminder/src/ui/homepage/homepage.dart';
 import 'package:medicine_reminder/src/ui/new_entry/new_entry_bloc.dart';
 import 'package:timezone/data/latest.dart';
 import 'package:timezone/timezone.dart' as t;
-import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 
 import 'package:medicine_reminder/src/ui/success_screen/success_screen.dart';
 import 'package:provider/provider.dart';
@@ -644,8 +643,7 @@ class TimeZone {
   }
   static TimeZone? _this;
 
-  Future<String> getTimeZoneName() async =>
-      FlutterNativeTimezone.getLocalTimezone();
+  Future<String> getTimeZoneName() async => 'UTC';
 
   Future<t.Location> getLocation([String? timeZoneName]) async {
     if (timeZoneName == null || timeZoneName.isEmpty) {
